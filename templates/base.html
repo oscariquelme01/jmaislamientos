@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../static/css/output.css" rel="stylesheet">
+        <link href="../static/css/styles.css" rel="stylesheet">
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="../static/js/navbar.js"></script>
+    </head>
+    <body>
+        <!-- navbar -->
+        <div class="bg-gray-900 w-full h-12  flex items-center justify-between">
+            <!-- logo -->
+            <svg height="80%" class="ml-2" viewBox="0 0 232 69" xmlns="http://www.w3.org/2000/svg">
+                <line y1="-1.5" x2="80.6303" y2="-1.5" transform="matrix(0.731923 -0.681387 0.824164 0.566351 3 56.9405)" stroke="white" stroke-width="3"/>
+                <line y1="-1.5" x2="82.3062" y2="-1.5" transform="matrix(0.922722 0.385465 -0.546754 0.837294 3 35.2738)" stroke="white" stroke-width="3"/>
+                <line y1="-1.5" x2="84.1415" y2="-1.5" transform="matrix(0.787615 -0.616167 0.774124 0.633033 36.3774 65.4524)" stroke="white" stroke-width="3"/>
+                <line y1="-1.5" x2="49.5853" y2="-1.5" transform="matrix(0.74142 0.671041 -0.816603 0.5772 77.4946 2)" stroke="white" stroke-width="3"/>
+                <line y1="-1.5" x2="56.8282" y2="-1.5" transform="matrix(0.834192 -0.551474 0.718617 0.695406 84.7505 64.2917)" stroke="white" stroke-width="3"/>
+                <line y1="-1.5" x2="99.7279" y2="-1.5" transform="matrix(0.780932 0.624616 -0.780932 0.624616 36.3774 2)" stroke="white" stroke-width="3"/>
+                <path d="M155.591 33.0909H159.818V58.0455C159.818 60.2727 159.409 62.1648 158.591 63.7216C157.773 65.2784 156.619 66.4602 155.131 67.267C153.642 68.0739 151.886 68.4773 149.864 68.4773C147.955 68.4773 146.256 68.1307 144.767 67.4375C143.278 66.733 142.108 65.733 141.256 64.4375C140.403 63.142 139.977 61.6023 139.977 59.8182H144.136C144.136 60.8068 144.381 61.6705 144.869 62.4091C145.369 63.1364 146.051 63.7045 146.915 64.1136C147.778 64.5227 148.761 64.7273 149.864 64.7273C151.08 64.7273 152.114 64.4716 152.966 63.9602C153.818 63.4489 154.466 62.6989 154.909 61.7102C155.364 60.7102 155.591 59.4886 155.591 58.0455V33.0909ZM168.29 33.0909H173.335L185.199 62.0682H185.608L197.472 33.0909H202.517V68H198.562V41.4773H198.222L187.312 68H183.494L172.585 41.4773H172.244V68H168.29V33.0909Z" fill="white"/>
+            </svg>
+            <!-- toggle menu -->
+            <a id="toggle-menu" class="mr-4 relative bottom-1">
+                <div id="toggle-menu-container" class="w-">
+                    <span id="menu-bar-1" class="block h-1 w-8 relative top-0 bg-gray-200 rounded-md"></span>
+                    <span id="menu-bar-2" class="block h-1 w-8 relative top-2 bg-gray-200 rounded-md"></span>
+                    <span id="menu-bar-3" class="block h-1 w-8 relative top-4 bg-gray-200 rounded-md"></span>
+                </div>
+            </a>
+
+        </div>
+    </body>
+</html>

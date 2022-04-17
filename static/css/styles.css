@@ -27,3 +27,20 @@
     top: 2px;
     transform: rotate(-45deg);
 }
+
+.mobile-menu{
+    -moz-transition: -moz-transform .5s;
+    -o-transition: -o-transform .5s;
+    -webkit-transition: -webkit-transform .5s;
+     -moz-transform-origin: top;
+    -ms-transform-origin: top;
+    -o-transform-origin: top;
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    transition: transform .5s;
+}
+
+.slide-menu{
+    transform: scaleY(0);
+}
+

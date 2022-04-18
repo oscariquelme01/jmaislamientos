@@ -1,46 +1,49 @@
-#toggle-menu.toggle-menu-active span{
-    transition: 
-        transform 0.3s ease-in-out 0.3s, 
-        top 0.25s ease-in-out, 
-        opacity 0.25s ease-in-out;
-}
+@media (max-width: 767px){
+                
+    #toggle-menu.toggle-menu-active span{
+        transition: 
+            transform 0.3s ease-in-out 0.3s, 
+            top 0.25s ease-in-out, 
+            opacity 0.25s ease-in-out;
+    }
 
-#toggle-menu span{
-    transition: 
-        transform 0.3s ease-in-out, 
-        top 0.25s ease-in-out 0.3s,
-        opacity 0.25s ease-in-out;
-    transform-origin: center;
-}
+    #toggle-menu span{
+        transition: 
+            transform 0.3s ease-in-out, 
+            top 0.25s ease-in-out 0.3s,
+            opacity 0.25s ease-in-out;
+        transform-origin: center;
+    }
 
-#toggle-menu.toggle-menu-active span#menu-bar-1{
-    top: 10px;
-    transform: rotate(45deg);
-}
+    #toggle-menu.toggle-menu-active span#menu-bar-1{
+        top: 10px;
+        transform: rotate(45deg);
+    }
 
-#toggle-menu.toggle-menu-active span#menu-bar-2{
-    top: 8px;
-    opacity: 0;
-}
+    #toggle-menu.toggle-menu-active span#menu-bar-2{
+        top: 8px;
+        opacity: 0;
+    }
 
-#toggle-menu.toggle-menu-active span#menu-bar-3{
-    top: 2px;
-    transform: rotate(-45deg);
-}
+    #toggle-menu.toggle-menu-active span#menu-bar-3{
+        top: 2px;
+        transform: rotate(-45deg);
+    }
 
-.mobile-menu{
-    -moz-transition: -moz-transform .5s;
-    -o-transition: -o-transform .5s;
-    -webkit-transition: -webkit-transform .5s;
-     -moz-transform-origin: top;
-    -ms-transform-origin: top;
-    -o-transform-origin: top;
-    -webkit-transform-origin: top;
-    transform-origin: top;
-    transition: transform .5s;
-}
+    .mobile-menu{
+        -moz-transition: -moz-transform .5s;
+        -o-transition: -o-transform .5s;
+        -webkit-transition: -webkit-transform .5s;
+         -moz-transform-origin: top;
+        -ms-transform-origin: top;
+        -o-transform-origin: top;
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        transition: transform .5s;
+    }
 
-.slide-menu{
-    transform: scaleY(0);
-}
+    .slide-menu{
+        transform: scaleY(0);
+    }
 
+}

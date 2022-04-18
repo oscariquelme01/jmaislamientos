@@ -23,22 +23,25 @@
                 <line y1="-1.5" x2="99.7279" y2="-1.5" transform="matrix(0.780932 0.624616 -0.780932 0.624616 36.3774 2)" stroke="white" stroke-width="3"/>
                 <path d="M155.591 33.0909H159.818V58.0455C159.818 60.2727 159.409 62.1648 158.591 63.7216C157.773 65.2784 156.619 66.4602 155.131 67.267C153.642 68.0739 151.886 68.4773 149.864 68.4773C147.955 68.4773 146.256 68.1307 144.767 67.4375C143.278 66.733 142.108 65.733 141.256 64.4375C140.403 63.142 139.977 61.6023 139.977 59.8182H144.136C144.136 60.8068 144.381 61.6705 144.869 62.4091C145.369 63.1364 146.051 63.7045 146.915 64.1136C147.778 64.5227 148.761 64.7273 149.864 64.7273C151.08 64.7273 152.114 64.4716 152.966 63.9602C153.818 63.4489 154.466 62.6989 154.909 61.7102C155.364 60.7102 155.591 59.4886 155.591 58.0455V33.0909ZM168.29 33.0909H173.335L185.199 62.0682H185.608L197.472 33.0909H202.517V68H198.562V41.4773H198.222L187.312 68H183.494L172.585 41.4773H172.244V68H168.29V33.0909Z" fill="white"/>
             </svg>
+
             <!-- toggle menu -->
-            <a id="toggle-menu" class="mr-4 relative bottom-1">
+            <a id="toggle-menu" class="mr-4 relative bottom-1 md:hidden">
                 <div id="toggle-menu-container" class="w-">
                     <span id="menu-bar-1" class="block h-1 w-8 relative top-0 bg-gray-200 rounded-md"></span>
                     <span id="menu-bar-2" class="block h-1 w-8 relative top-2 bg-gray-200 rounded-md"></span>
                     <span id="menu-bar-3" class="block h-1 w-8 relative top-4 bg-gray-200 rounded-md"></span>
                 </div>
             </a>
+            <!-- menu items -->
+            <div class="mobile-menu slide-menu absolute top-12 w-full md:relative md:top-0 md:block md:h-full">
+                <ul class="md:flex md:justify-end md:items-center md:h-full">
+                    <li class="active"><a href="index.html" class="block md:flex md:items-center px-2 py-4 md:py-0 md:h-full bg-gray-700 md:bg-transparent font-semibold  text-white">Home</a></li>
+                    <li><a href="#services" class="block md:flex md:items-center px-2 py-4 md:py-0 md:h-full bg-gray-200 md:bg-transparent md:text-white">Services</a></li>
+                    <li><a href="#about" class="block md:flex md:items-center px-2 py-4 md:py-0 md:h-full bg-gray-200 md:bg-transparent md:text-white">About</a></li>
+                    <li><a href="#contact" class="block md:flex md:items-center px-2 py-4 md:py-0 md:h-full bg-gray-200 md:bg-transparent md:text-white">Contact Us</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="relative mobile-menu slide-menu">
-				<ul class="">
-					<li class="active"><a href="index.html" class="block text-sm px-2 py-4 text-white bg-gray-700 font-semibold hover:bg-gray-800 transition duration-300">Home</a></li>
-					<li><a href="#services" class="block bg-gray-200 text-sm px-2 py-4 hover:bg-gray-300 transition duration-300">Services</a></li>
-					<li><a href="#about" class="block bg-gray-200 text-sm px-2 py-4 hover:bg-gray-300 transition duration-300">About</a></li>
-					<li><a href="#contact" class="block bg-gray-200 text-sm px-2 py-4 hover:bg-gray-300 transition duration-300">Contact Us</a></li>
-				</ul>
-			</div>
+
     </body>
 </html>

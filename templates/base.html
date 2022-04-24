@@ -9,6 +9,7 @@
         <!-- jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="../static/js/navbar.js"></script>
+        <script src="https://kit.fontawesome.com/e88e09462e.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <!-- navbar -->
@@ -25,7 +26,7 @@
             </svg>
 
             <!-- toggle menu -->
-            <a id="toggle-menu" class="mr-4 relative bottom-1 md:hidden">
+            <a id="toggle-menu" class="mr-4 relative bottom-1 md:hidden mr-2">
                 <div id="toggle-menu-container" class="w-">
                     <span id="menu-bar-1" class="block h-1 w-8 relative top-0 bg-gray-200 rounded-md"></span>
                     <span id="menu-bar-2" class="block h-1 w-8 relative top-2 bg-gray-200 rounded-md"></span>
@@ -42,6 +43,66 @@
                 </ul>
             </div>
         </div>
-
-    </body>
-</html>
+        {% block body%}
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        {% endblock %}
+        <!-- Footer -->
+        <div class="bg-gray-800 md:flex w-full justify-evenly">
+            <!-- resumen -->
+            <div class="hidden md:block md:w-2/5 md:mx-4">
+                <h2 class="text-white w-full py-4 font-bold text-xl hidden md:block">JM Aislamientos y revestimientos S.L</h2>
+                <div class="text-white">Nos dedicamos a hacer revestimientos y aislamientos de interiores, tabiquería y techos registrables entre otros. Nuestro enfoque se basa en la formalidad y el trabajo preciso y bien hecho.</div>
+            </div>
+            <!-- información -->
+            <div class="md:w-2/5">
+                <h2 class="text-white w-full py-4 text-center md:text-left font-bold text-xl">Información</h3>
+                <div class="mx-2">
+                    <div class="flex w-full md:flex-col">
+                        <div class="flex justify-start ml-2 w-1/2">
+                            <i class="fa-solid fa-location-dot text-white"></i>
+                            <div class="text-white ml-2">C/ Dr. Michavila, 29</div>
+                        </div>
+                        <div class="flex justify-start ml-2 w-1/2">
+                            <i class="fa-solid fa-phone text-white"></i>
+                            <div class="text-white ml-2">606 33 82 01</div>
+                        </div>
+                    </div>
+                    <div class="flex mt-2 md:mt-0 ml-1 md:ml-2">
+                        <i class="fa-solid fa-envelope text-white"></i>
+                        <div class="text-white ml-2"> juanMerino@jmaislamientos.com</div>
+                    </div>
+                </div>
+            </div>
+            <!-- links -->
+            <div class="md:w-1/5">
+                <h2 class="text-white w-full py-4 text-center md:text-left font-bold text-xl">Links</h3>
+                <div class="flex w-full justify-evenly md:flex-col pb-4">
+                    <a href="#" class="text-white underline">Aviso legal</a>
+                    <a href="#" class="text-white underline">Politica de cookies</a>
+                    <a href="#" class="text-white underline">Enviar mensaje</a>
+                </div>
+            </div>
+        </div> <!-- footer -->
+        <div class="border-b-2 border-b-gray-400 pt-4 bg-gray-800"></div>
+        <div class="w-full bg-gray-800 text-gray-400 p-2 text-right">Copyright © 2022 JM Aislamientos y Revestimientos S.L. - All rights reserved</div>
+        </body>
+    </html>

@@ -1,0 +1,48 @@
+{% extends "base.html"%}
+{% block title%} Aisalimentos {% endblock %}
+{% block body%}
+<!-- intro -->
+<div class="overflow-hidden md:flex md:flex-row md:justify-around md:items-center">
+    <div class="pt-4 px-4 w-full md:w-4/5 lg:w-2/5">
+        <h2 class="mt-4 text-2xl font-bold text-center bg-clip-text lg:text-3xl">¿QUE SON LOS TECHOS REGISTRABLES?</h2>
+        <div class="mx-8">
+            <br>
+            <p class="text-center lg:text-xl">  Aqui hay que elaborar un texto introductorio sobre techos registrables y todo eso que yo no  se y tengo que preguntar</p>
+        </div>
+    </div>
+    <div class="lg:w-auto w-full lg:static flex justify-center">
+        <img class="" src="{{ url_for('static', filename='img/techo.jpg')}}" alt="">
+    </div>
+</div>
+
+<!-- que ofrecemos -->
+<div class="bg-gray-700 p-4 w-full">
+    <h2 class="mt-4 text-2xl font-bold text-center bg-clip-text lg:text-3xl text-white">¿QUE OFRECEMOS?</h2>
+    <div class="mx-8">
+        <br>
+        <p class="text-center lg:text-xl text-white">  Aqui hay que elaborar un texto introductorio sobre techos registrables y todo eso que yo no  se y tengo que preguntar</p>
+    </div>
+</div>
+    
+<!-- tipos de techo -->
+<h2 class="my-4 w-full text-2xl font-bold text-center bg-clip-text lg:text-3xl">Tipos de techos</h2>
+<div class="grid grid-cols-2 grid-rows-2 w-full lg:gap-2">
+    <div class="col-start-1 col-span-1 row-start-1 row-span-1 ">
+        <!-- 1 -->
+        <img width="100%" height="100%" class="object-contain" src="{{ url_for('static', filename='img/techos/techo-1.jpeg')}}" alt="">
+    </div>
+    <div class="col-start-1 col-span-1 row-start-2 row-span-1 ">
+        <!-- 2 -->
+        <img width="100%" height="100%" class="object-contain" src="{{ url_for('static', filename='img/techos/techo-2.jpeg')}}" alt="">
+    </div>
+    <div class="col-start-2 col-span-1 row-start-1 row-span-1 ">
+        <!-- 3 -->
+        <img width="100%" height="100%" class="object-contain" src="{{ url_for('static', filename='img/techos/techo-3.jpeg')}}" alt="">
+    </div>
+    <div class="col-start-2 col-span-1 row-start-2 row-span-1 ">
+        <!-- 4 -->
+        <img width="100%" height="100%" class="object-contain" src="{{ url_for('static', filename='img/techos/techo-4.jpg')}}" alt="">
+    </div>
+</div>
+
+{% endblock %}

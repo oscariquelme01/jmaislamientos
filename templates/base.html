@@ -19,7 +19,7 @@
         <!-- navbar -->
         <div class="bg-gray-900 w-full h-12  flex items-center justify-between">
             <!-- logo -->
-            <svg height="80%" class="ml-2" viewBox="0 0 232 69" xmlns="http://www.w3.org/2000/svg">
+            <svg height="80%" class="ml-2 md:ml-10 lg:ml-16" viewBox="0 0 232 69" xmlns="http://www.w3.org/2000/svg">
                 <line y1="-1.5" x2="80.6303" y2="-1.5" transform="matrix(0.731923 -0.681387 0.824164 0.566351 3 56.9405)" stroke="white" stroke-width="3"/>
                 <line y1="-1.5" x2="82.3062" y2="-1.5" transform="matrix(0.922722 0.385465 -0.546754 0.837294 3 35.2738)" stroke="white" stroke-width="3"/>
                 <line y1="-1.5" x2="84.1415" y2="-1.5" transform="matrix(0.787615 -0.616167 0.774124 0.633033 36.3774 65.4524)" stroke="white" stroke-width="3"/>
@@ -38,16 +38,16 @@
                 </div>
             </a>
             <!-- menu items -->
-            <div class="mobile-menu slide-menu absolute top-12 w-full md:relative md:top-0 md:block md:h-full">
-                <ul class="md:flex md:justify-end md:items-center md:h-full">
-                    <li class="active"><a href="index.html" class="block md:flex md:items-center px-2 py-4 md:py-0 md:h-full bg-gray-700 md:bg-transparent font-semibold  text-white">Home</a></li>
-                    <li><a href="#services" class="block md:flex md:items-center px-2 py-4 md:py-0 md:h-full bg-gray-200 md:bg-transparent md:text-white">Services</a></li>
-                    <li><a href="#about" class="block md:flex md:items-center px-2 py-4 md:py-0 md:h-full bg-gray-200 md:bg-transparent md:text-white">About</a></li>
-                    <li><a href="#contact" class="block md:flex md:items-center px-2 py-4 md:py-0 md:h-full bg-gray-200 md:bg-transparent md:text-white">Contact Us</a></li>
+            <div class="mobile-menu slide-menu absolute top-12 w-full md:w-[45%] lg:w-[35%] xl:w-[27%] md:relative md:top-0 md:block md:h-full">
+                <ul class="md:flex md:justify-around md:items-center md:h-full">
+                    <li class="active"><a href="index.html" class="block md:flex md:items-center px-2 py-4 md:py-0 md:h-full bg-gray-700 md:bg-transparent font-semibold  text-white md:text-xl md:hover:text-gray-300">Home</a></li>
+                    <li><a href="#services" class="block md:flex md:items-center px-2 py-4 md:py-0 md:h-full bg-gray-200 md:bg-transparent md:text-white md:text-xl md:hover:text-gray-300">Services</a></li>
+                    <li><a href="#about" class="block md:flex md:items-center px-2 py-4 md:py-0 md:h-full bg-gray-200 md:bg-transparent md:text-white md:text-xl md:hover:text-gray-300">About</a></li>
+                    <li><a href="#contact" class="block md:flex md:items-center px-2 py-4 md:py-0 md:h-full bg-gray-200 md:bg-transparent md:text-white md:text-xl md:hover:text-gray-300">Contact Us</a></li>
                 </ul>
             </div>
         </div>
-        <div>
+        <div class="flex items-center flex-col w-full">
         {% block body%}
 
         {% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html"%}
+{% block title%} Pladur {% endblock %}
+{% block body%}
+<!-- intro -->
+<div class="overflow-hidden md:flex md:flex-row md:justify-between">
+    <div class="mb-8 px-4 w-full md:w-3/5 lg:w-2/5 md:relative md:left-20 xl:left-[20%]">
+        <h2 class="mt-8 text-2xl font-bold text-center bg-clip-text md:text-3xl lg:text-4xl">¿QUE ES EL PLADUR?</h2>
+        <div class="mx-8">
+            <br>
+            <p class="text-center lg:text-xl">  Aqui hay que elaborar un texto introductorio sobre techos registrables y todo eso que yo no  se y tengo que preguntar</p>
+        </div>
+    </div>
+    <img class="w-1/5 xl:w-[15%] hidden md:block relative md:left-0" src="{{ url_for('static', filename='img/pladur.jpg')}}" alt="">
+</div>
+
+<!-- que ofrecemos -->
+<div class="bg-gray-700 p-4 w-full">
+    <h2 class="mt-4 text-2xl font-bold text-center bg-clip-text lg:text-3xl text-white">¿QUE OFRECEMOS?</h2>
+    <div class="mx-8">
+        <br>
+        <p class="text-center lg:text-xl text-white">  Aqui hay que elaborar un texto introductorio sobre techos registrables y todo eso que yo no  se y tengo que preguntar</p>
+    </div>
+</div>
+    
+<!-- tipos de techo -->
+<h2 class="my-4 w-full text-2xl font-bold text-center bg-clip-text lg:text-3xl">Tipos de techos</h2>
+<div class="m-4 grid grid-cols-6 h-full grid-rows-[minmax(240px,_1fr)_minmax(240px,_1fr)_minmax(240px,_1fr)] w-full gap-1 md:gap-2">
+    <div class="card hidden md:block col-start-1 col-span-2 row-start-1 row-span-1" style="background-image: url({{url_for('static', filename='img/pladur/pladur-1.jpeg')}})"></div>
+    <div class="card hidden md:block col-start-1 col-span-2 row-start-2 row-span-1" style="background-image: url({{url_for('static', filename='img/pladur/pladur-2.jpeg')}})"></div>
+    <div class="card col-start-1 col-span-6 md:col-start-3 md:col-span-4 row-start-1 row-span-2" style="background-image: url({{url_for('static', filename='img/pladur/pladur-3.jpeg')}})"></div>
+    <div class="card col-start-1 col-span-3 row-start-3 row-span-1" style="background-image: url({{url_for('static', filename='img/pladur/pladur-4.jpeg')}})"></div>
+    <div class="card col-start-4 col-span-3 row-start-3 row-span-1" style="background-image: url({{url_for('static', filename='img/pladur/pladur-5.jpeg')}})"></div>
+</div>
+
+{% endblock %}

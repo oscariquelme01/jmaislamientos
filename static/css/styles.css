@@ -137,6 +137,7 @@ h1, h2, h3 {
     right: 0;
     text-align: center;
     z-index: 10;
+    max-height: 32px;
 }
 
 .carousel-indicators li {
@@ -161,3 +162,13 @@ h1, h2, h3 {
     color: #428bca;
 }
 
+
+/* card images */
+.card {
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5 rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: 100%;
+}

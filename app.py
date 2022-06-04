@@ -21,3 +21,7 @@ def pladur():
 @app.route("/contact", methods=['POST'])
 def contacto():
     pass
+
+@app.route("/work-in-progress")
+def not_implemented():
+    return render_template('not-implemented.html')

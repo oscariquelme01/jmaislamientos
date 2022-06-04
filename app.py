@@ -17,3 +17,7 @@ def aislamientos():
 @app.route("/pladur")
 def pladur():
     return render_template('pladur.html')
+
+@app.route("/contact", methods=['POST'])
+def contacto():
+    pass

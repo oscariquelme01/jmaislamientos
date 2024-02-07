@@ -10,7 +10,7 @@ function Hero() {
         flex flex-col gap-4 md:gap-8 justify-center items-center
         absolute left-1/2 top-1/2 m-auto -translate-x-[50%] -translate-y-[50%] z-2 text-white'>
         <div>
-          <span className='text-transparent font-outline-2 xl:font-outline-3
+          <span className='text-transparent font-outline-1 md:font-outline-2 xl:font-outline-3
           text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl
             relative top-[0.5rem]
             '>JM </span>

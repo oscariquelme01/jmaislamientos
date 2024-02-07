@@ -4,7 +4,7 @@ import { companiesPath } from '../const'
 function companies() {
   return (
     <div className='flex flex-col items-center justify-center mt-8 lg:mt-16 mx-4'>
-      <h3 className='text-xl md:text-2xl lg:text-4xl text-center font-semibold w-full text-accentDark'>
+      <h3 className='text-lg md:text-xl lg:text-2xl text-center font-semibold w-full text-accentDark'>
         Unete al grupo de clientes satisfechos con nuestros servicios
       </h3>
       <div className='flex justify-around w-full lg:w-4/5 mt-4 md:mt-8'>

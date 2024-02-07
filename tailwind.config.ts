@@ -7,9 +7,17 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    colors: {
+      white: '#ffffff',
+      transparent: 'transparent',
+      black: '#000000',
+      accent: '#0C4275',
+      accentLight: '#8DC8FF',
+      accentDark: '#03061D'
+    },
     extend: {
       backgroundImage: {
-        'bg-gradient': 'linear-gradient(180deg, rgba(12, 66, 117, 0.8), rgba(12, 66, 117, 1))',
+        'gradient-accent': 'linear-gradient(0deg, rgba(12,66,117,1) 0%, rgba(12,66,117,0.8) 100%)'
       },
     },
   },

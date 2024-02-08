@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 function Stats() {
   return (
-    <div className='my-8'>
-      <div className='mx-4 my-8 flex w-full flex-col items-center justify-center rounded-3xl bg-gradient-accent'>
-        <div className='my-2 flex w-full flex-col items-center justify-center gap-4'>
+    <div className='my-8 flex flex-col items-center'>
+      <div className='my-8 flex w-4/5 flex-col items-center justify-center rounded-3xl bg-gradient-accent md:flex-row md:w-[94%] lg:w-4/5 box-shadow'>
+        <div className='mb-2 flex w-full flex-col items-center justify-center gap-4 mt-4'>
           <Image
             src='/icons/medal-icon.svg'
             alt='Worker Icon'
@@ -33,7 +33,7 @@ function Stats() {
             +200
           </div>
           <div className='mb-4 w-4/5 rounded-xl bg-white p-4 text-center text-lg font-normal text-accentDark'>
-            Hemos completado más de  200 proyectos de todas las dimensiones
+            Hemos completado más de  200 proyectos de todas las dimensione
           </div>
         </div>
 

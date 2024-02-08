@@ -18,4 +18,8 @@
   .text-shadow {
     text-shadow: 16px 11px 8px rgba(0, 0, 0, 0.25);
   }
+
+  .box-shadow {
+    box-shadow: 10px 10px 8px rgba(0,0,0,0.25);
+  }
 }

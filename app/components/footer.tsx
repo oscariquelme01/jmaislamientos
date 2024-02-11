@@ -3,75 +3,66 @@ import Image from 'next/image';
 
 function footer() {
   return (
-    <>
-      <div className='flex w-full items-center justify-center border-t-[1px] border-t-[rgba(255,255,255,0.4)] bg-accent'>
-        <div className='mt-4 lg:py-8 grid w-full md:w-4/5 lg:w-3/5 grid-cols-[30%_70%] gap-4 text-left text-white md:grid-cols-[40%_20%_40%]'>
-          <div className='col-span-2 md:col-span-1 flex flex-col items-center justify-center'>
-            <h2 className='mb-2 text-2xl lg:text-3xl '>
-              J.M. Aislamientos y Revestimientos
-            </h2>
-          </div>
-          <div className='row-start-2'>
-            Nos dedicamos a hacer revestimientos y aislamientos de interiores,
-            tabiquería y techos registrables entre otros.
-          </div>
-
-          <div className='flex items-center'>
-            <h4 className='mb-2 text-xl lg:text-2xl'>Links</h4>
-          </div>
-          <div className='justify-start flex flex-col gap-2 row-start-2'>
-            <a href='/'>
-              Aviso LegaL
-            </a>
-            <a href='/'>
-              Politica de cookies
-            </a>
-            <a href='/'>
-              Contacto
-            </a>
-          </div>
-
-          <div className='flex items-center'>
-            <h4 className='mb-2 text-xl lg:text-2xl'>Información</h4>
-          </div>
-          <div className='justify-start items-start flex flex-col gap-2 row-start-2'>
-            <div className='flex justify-center items-center gap-2'>
-              <Image
-                className='h-4 w-4'
-                width={0}
-                height={0}
-                src='/icons/mail.svg'
-                alt='mail icon'
+    <footer className='bg-accent'>
+      <div className='mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8'>
+        <hr className='my-6 border-[rgba(255,255,255,0.4)] sm:mx-auto lg:my-8' />
+        <div className='md:flex md:justify-around gap-4'>
+          <div className='mb-6 md:mb-0'>
+            <a href='#top' className='flex items-center'>
+              <img
+                src='/images/logo-white.png'
+                className='me-3 h-8'
+                alt='Company Logo'
               />
-              juan.merino@jmaislamientos.es
+              <span className='self-center whitespace-nowrap text-2xl font-semibold text-white'>
+                JM Aislamientos
+                <br />y Revestimientos
+              </span>
+            </a>
+          </div>
+          <div className='grid grid-cols-[60%_40%] gap-8 sm:gap-6 flex-grow mx-8'>
+            <div>
+              <h2 className='mb-6 text-sm font-medium uppercase text-white'>
+                Información
+              </h2>
+              <ul className='text-white'>
+                <li className='flex gap-2 mb-4'>
+                  <Image width={0} height={0} alt='phone icon' src={'/icons/phone.svg'} className='w-4'/>
+                  <span>601 30 44 60</span>
+                </li>
+                <li className='flex gap-2'>
+                  <Image width={0} height={0} alt='Location icon' src={'/icons/location.svg'} className='w-4'/>
+                  <span>c/Dr. Michavila º 29 </span>
+                </li>
+              </ul>
             </div>
-            <div className='flex justify-center items-center gap-2'>
-              <Image
-                className='h-4 w-4'
-                width={0}
-                height={0}
-                src='/icons/location.svg'
-                alt='location icon'
-              />
-              c/ Dr. Michavila º 29
-            </div>
-            <div className='flex justify-center items-center gap-2'>
-              <Image
-                className='h-4 w-4 justify-self-start'
-                width={0}
-                height={0}
-                src='/icons/phone.svg'
-                alt='phone icon'
-              />
-              606338201
+            <div>
+              <h2 className='mb-6 text-sm font-medium uppercase text-white'>
+                Legal
+              </h2>
+              <ul className='text-white'>
+                <li className='mb-4'>
+                  <a href='/under-construction' className='hover:underline'>
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href='/under-construction' className='hover:underline'>
+                    Terms &amp; Conditions
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
+        <hr className='my-6 border-[rgba(255,255,255,0.4)] sm:mx-auto lg:my-8' />
+        <div className='sm:flex sm:items-center sm:justify-between'>
+          <span className='text-white text-sm sm:text-center'>
+            © 2023 JM Aislamientos y Revestimientos™ . All Rights Reserved.
+          </span>
+        </div>
       </div>
-      <div className='border-t-[1px] border-[rgba(255,255,255,0.4)] bg-accent'>
-        <div className='p-2 text-right text-white mr-8'>Copyright © 2024 JM Aislamientos y Revestimientos S.L. - All rights reserved</div>
-      </div>
-    </>
+    </footer>
   );
 }
 

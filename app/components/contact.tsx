@@ -8,7 +8,7 @@ function contact() {
       <form
         action={''}
         method='post'
-        className='mb-8 grid w-4/5 grid-cols-1 gap-4 md:grid-cols-2 xl:w-3/5'
+        className='mb-8 grid w-4/5 xl:w-3/5 grid-cols-1 gap-4 xl:gap-8 md:grid-cols-2 xl:w-3/5'
       >
         <input className='row-start-1 bg-white p-2' placeholder='Nombre' />
         <input

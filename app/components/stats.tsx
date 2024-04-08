@@ -4,7 +4,7 @@ import Image from 'next/image';
 function Stats() {
   return (
     <div className='my-8 flex flex-col items-center'>
-      <div className='box-shadow my-8 flex w-4/5 flex-col items-center justify-center rounded-3xl bg-gradient-accent md:w-[94%] md:flex-row lg:w-4/5'>
+      <div className='max-w-screen-xl box-shadow my-8 flex w-4/5 flex-col items-center justify-center rounded-3xl bg-gradient-accent md:w-[94%] md:flex-row lg:w-4/5'>
         <div className='grid w-full grid-cols-1 gap-4 md:grid-cols-[1fr_1fr_1fr]'>
           <div className='row-start-1 mt-4 flex items-center justify-center md:row-start-auto'>
             <Image
@@ -34,7 +34,7 @@ function Stats() {
             />
           </div>
           <div className='row-start-2 flex items-center justify-center md:row-start-auto'>
-            <div className='text-shadow text-4xl text-6xl font-bold text-accentLight'>
+            <div className='text-shadow text-4xl font-bold text-accentLight'>
               +25
             </div>
           </div>
@@ -44,7 +44,7 @@ function Stats() {
             </div>
           </div>
           <div className='row-start-8 flex items-center justify-center md:row-start-auto'>
-            <div className='text-shadow text-4xl text-6xl font-bold text-accentLight'>
+            <div className='text-shadow text-4xl font-bold text-accentLight'>
               +20
             </div>
           </div>

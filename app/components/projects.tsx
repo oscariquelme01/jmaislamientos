@@ -10,7 +10,7 @@ function Projects() {
         Mira alguno de nuestros últimos proyectos
       </h3>
 
-      <div className='grid w-4/5 grid-cols-1 gap-4 md:grid-cols-[50%_50%]'>
+      <div className='grid w-4/5 grid-cols-1 gap-4 md:grid-cols-[50%_50%] max-w-screen-xl'>
         <div>
           <h4 className='box-shadow relative left-8 top-2 z-10 w-fit bg-white px-4 py-2 text-xl'>
             Proyecto 1

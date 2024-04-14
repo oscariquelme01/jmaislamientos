@@ -1,5 +1,5 @@
 ## FUTURE WORK:
-- [ ] Get everything under a max-w-screen-xl
+- [x] Get everything under a max-w-screen-xl
 - [ ] Make decent animations for the stats section with numbers going from 0 to X
 - [ ] Make decent animations for the company section aka get some movement (?)
 - [ ] Fill projects

@@ -7,14 +7,6 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    colors: {
-      white: '#ffffff',
-      transparent: 'transparent',
-      black: '#000000',
-      accent: '#0C4275',
-      accentLight: '#8DC8FF',
-      accentDark: '#03061D',
-    },
     extend: {
       backgroundImage: {
         'gradient-accent':

@@ -1,41 +1,38 @@
-import React from 'react';
+import React from 'react'
+import Navbar from './navbar'
+
+import { ArrowRightIcon } from '@heroicons/react/24/outline'
 
 function Hero() {
   return (
-    <div className='relative h-auto w-full overflow-hidden bg-black'>
-      <img src='/images/workers.png' className='w-full opacity-70' alt='' />
-      <div className='max-w-screen-xl'>
-        <div
-          className='tracking-thin z-2 absolute
-        left-1/2 top-1/2 m-auto flex w-4/5 -translate-x-[50%]
-        -translate-y-[50%] flex-col
-        items-center justify-center gap-4 text-center text-3xl font-extrabold
-        text-white sm:text-4xl md:gap-8 md:text-5xl lg:w-[70%] lg:text-6xl xl:text-7xl 2xl:text-8xl'
-        >
-          <div>
-            <span
-              className='font-outline-1 md:font-outline-2 xl:font-outline-3 2xl:text-10xl
-          relative top-[0.5rem] text-5xl text-transparent sm:text-6xl md:text-7xl
-            lg:text-8xl xl:text-9xl
-            '
-            >
-              JM{' '}
-            </span>
-            Aislamientos
-            <br /> y Revesitimientos
-          </div>
-          <div
-            className='w-full text-base font-normal sm:text-lg md:text-xl
-        lg:w-[70%] xl:text-2xl
-          '
+    <section className="bg-gray-600 bg-[url('/images/workers.png')] bg-center bg-no-repeat bg-blend-multiply">
+      <Navbar/>
+      <div className='mx-auto max-w-screen-xl px-4 py-24 text-center lg:py-56'>
+        <h1 className='mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl'>
+          JM Aislamientos y Revestimientos
+        </h1>
+        <p className='mb-8 text-lg font-normal text-gray-300 sm:px-16 lg:px-48 lg:text-xl'>
+          Here at Flowbite we focus on markets where technology, innovation, and
+          capital can unlock long-term value and drive economic growth.
+        </p>
+        <div className='flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0'>
+          <a
+            href='#'
+            className='inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-3 text-center text-base font-medium text-white hover:bg-blue-700'
           >
-            Ayudamos a todo tipo de empresas con soluciones de pladur,
-            insonorizaciones, revestimientos, aislamientos y más
-          </div>
+            ¡Contáctanos!
+            <ArrowRightIcon className='block h-4 w-6 stroke-[3px]' aria-hidden='true'/>
+          </a>
+          <a
+            href='#'
+            className='inline-flex items-center justify-center rounded-lg border border-white px-5 py-3 text-center text-base font-medium text-white hover:bg-gray-100 hover:text-gray-900 sm:ms-4'
+          >
+            Conócenos
+          </a>
         </div>
       </div>
-    </div>
-  );
+    </section>
+  )
 }
 
-export default Hero;
+export default Hero

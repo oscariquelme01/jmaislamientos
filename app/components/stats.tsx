@@ -15,16 +15,16 @@ function Stats() {
       description: 'Contamos con mas de 25 años de experiencia en el sector, cumpliendo con proyectos de todos los tamaños',
       icon: AcademicCapIcon
     },
-    {
-      title: 'Profesionales',
-      description: 'Contamos con mas de 25 años de experiencia en el sector, cumpliendo con proyectos de todos los tamaños',
-      icon: AcademicCapIcon
-    },
-    {
-      title: 'Proyectos',
-      description: 'Contamos con mas de 25 años de experiencia en el sector, cumpliendo con proyectos de todos los tamaños',
-      icon: AcademicCapIcon
-    }
+    // {
+    //   title: 'Profesionales',
+    //   description: 'Contamos con mas de 25 años de experiencia en el sector, cumpliendo con proyectos de todos los tamaños',
+    //   icon: AcademicCapIcon
+    // },
+    // {
+    //   title: 'Proyectos',
+    //   description: 'Contamos con mas de 25 años de experiencia en el sector, cumpliendo con proyectos de todos los tamaños',
+    //   icon: AcademicCapIcon
+    // }
   ]
 
   const callbackFunction = (entries) => {
@@ -38,10 +38,6 @@ function Stats() {
 
   return (
     <div className='my-8 flex items-center justify-center gap-6' ref={wrapperRef}>
-      { /* @ts-ignore weird type error where I can't pass an icon from heroicons/react as a prop but can pass any other component */ }
-      <Card title='Experiencia' description='Contamos con mas de 25 años de experiencia en el sector, cumpliendo con proyectos de todos los tamaños' Icon={AcademicCapIcon}/>
-      { /* @ts-ignore weird type error where I can't pass an icon from heroicons/react as a prop but can pass any other component */ }
-      <Card title='Experiencia' description='Contamos con mas de 25 años de experiencia en el sector, cumpliendo con proyectos de todos los tamaños' Icon={AcademicCapIcon}/>
       { /* @ts-ignore weird type error where I can't pass an icon from heroicons/react as a prop but can pass any other component */ }
       <Card title='Experiencia' description='Contamos con mas de 25 años de experiencia en el sector, cumpliendo con proyectos de todos los tamaños' Icon={AcademicCapIcon}/>
     </div>

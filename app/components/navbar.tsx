@@ -43,8 +43,8 @@ export default function Navbar() {
             >
               <Menu.Items className='absolute left-0 mt-2 w-screen origin-top-left divide-y divide-gray-100 shadow-lg ring-1 ring-black/5 focus:outline-none'>
                 <div className='px-1 py-1 '>
-                  {navigation.map((item) => (
-                    <Menu.Item>
+                  {navigation.map((item, index) => (
+                    <Menu.Item key={index}>
                       {({ active }) => (
                         <button className='group flex w-full items-center py-2 text-sm text-white border-b-[1px] border-b-gray-700'>
                           { item.name }

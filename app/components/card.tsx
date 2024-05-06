@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import IncreasingNumber from './increasingNumber'
 
 import { AcademicCapIcon } from '@heroicons/react/24/outline'
 
@@ -12,6 +13,7 @@ type cardProps = {
 function card({ title, description, Icon }: cardProps) {
   return (
     <div className='flex flex-col items-start bg-white w-80 p-8 rounded-md border-[1px] border-gray-300'>
+      <IncreasingNumber finalValue={25} duration={1000}/>
       <div className='mt-4 mb-8'>
         <Icon className='stroke-black h-20 w-20'/>
       </div>

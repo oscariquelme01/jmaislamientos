@@ -14,7 +14,7 @@ function companies() {
         <div className='inline-flex w-full max-w-screen-xl flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]'>
           <ul className='flex animate-infinite-scroll-x items-center justify-center md:justify-start [&_img]:max-w-none lg:[&_li]:mx-8 [&_li]:mx-4'>
             {companiesPath.map((path, index) => (
-              <li>
+              <li key={index}>
                 <img
                   src={`/images/${path}`}
                   alt={`company ${index} logo`}
@@ -31,7 +31,7 @@ function companies() {
             aria-hidden={true}
           >
             {companiesPath.map((path, index) => (
-              <li>
+              <li key={index}>
                 <img
                   src={`/images/${path}`}
                   alt={`company ${index} logo`}

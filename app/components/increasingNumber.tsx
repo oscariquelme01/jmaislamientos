@@ -4,9 +4,10 @@ import { useInView } from 'react-intersection-observer'
 interface Props {
   finalValue: number
   duration: number
+  className: String
 }
 
-const AnimatedValueOnScroll: React.FC<Props> = ({ finalValue, duration }) => {
+const AnimatedValueOnScroll: React.FC<Props> = ({ finalValue, duration, className }) => {
   const [currentValue, setCurrentValue] = useState(0)
   const [isCounting, setIsCounting] = useState(false)
   const [ref, inView] = useInView()
@@ -31,7 +32,7 @@ const AnimatedValueOnScroll: React.FC<Props> = ({ finalValue, duration }) => {
 
   return (
     <div ref={ref}>
-      <span className='text-8xl text-blue-600 font-bold'>+{currentValue}</span>
+      <span className={className}>+{currentValue}</span>
     </div>
   )
 }

@@ -5,7 +5,7 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline'
 
 function Hero() {
   return (
-    <section className="bg-gray-600 bg-[url('/images/workers.png')] bg-center bg-no-repeat bg-blend-multiply">
+    <section className="bg-gray-600 bg-[url('/images/workers.png')] bg-center bg-no-repeat bg-blend-multiply w-full">
       <Navbar/>
       <div className='mx-auto max-w-screen-xl px-4 py-24 text-center lg:py-56'>
         <h1 className='mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl'>

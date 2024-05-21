@@ -10,75 +10,74 @@ import Image from 'next/image'
 
 import IncreasingNumber from './increasingNumber'
 
+const statsData = [
+  {
+    finalValue: 25,
+    duration: 1000, // ms
+    path: '/icons/experience.svg',
+    title: 'Años de experiencia',
+    text: 'Contamos con más de 25 años de experiencia en el sector los cuales nos permiten asegurarte que estarás en manos de verdaderos maestros del oficio',
+  },
+  {
+    finalValue: 300,
+    duration: 1000, // ms
+    path: '/icons/projects.svg',
+    title: 'Proyectos completados',
+    text: 'A lo largo de nuestras decadas de trabajo, hemos completado mas de 300 proyectos siempre con un enfoque serio y profesional',
+  },
+  {
+    finalValue: 300,
+    duration: 1000, // ms
+    path: '/icons/worker.svg',
+    title: 'Profesionales en el sector',
+    text: 'Nuestra plantilla esta formada por más de 20 profesionales curtidos en años de trabajo y dedicación al oficio',
+  },
+]
+
 function Stats() {
   return (
-    <div className='m-8 flex max-w-screen-xl items-center justify-center'>
-      <div className='w-1/4 flex flex-col items-center rounded-md'>
-        <Image
-          alt='whatdaheell'
-          src='/icons/experience.svg'
-          width={0}
-          height={0}
-          className='my-4 w-32'
-        />
+    <div className='m-8 grid lg:max-w-screen-xl max-w-screen-md lg:grid-flow-col lg:grid-rows-4-auto'>
+      {statsData.map((statData, index) => (
+        <>
+          <div className='flex items-center justify-center'>
+            <Image
+              key={index * statsData.length}
+              alt='whatdaheell'
+              src={statData.path}
+              width={0}
+              height={0}
+              className='my-4 w-32'
+            />
+          </div>
 
-        <IncreasingNumber
-          finalValue={25}
-          duration={1000}
-          className={'text-8xl font-bold text-blue-600'}
-        />
-        <h4 className='w-full bg-blue-600 px-8 py-2 text-center text-3xl font-bold text-white'>
-          Años de experiencia
-        </h4>
-        <div className='bg-blue-600 px-12 pb-4 text-center text-gray-200'>
-          Contamos con más de 25 años de experiencia en el sector los cuales nos
-          permiten asegurarte que estarás en manos de verdaderos maestros del
-          oficio
-        </div>
-      </div>
+          <div className='flex items-center justify-center'>
+            <IncreasingNumber
+              key={index * statsData.length + 1}
+              finalValue={statData.finalValue}
+              duration={statData.duration}
+              className={`text-6xl lg:text-8xl font-bold ${index % 2 ? 'text-blue-700' : 'text-blue-600'}`}
+            />
+          </div>
 
-      <div className='w-1/4 flex flex-col items-center rounded-md'>
-        <Image
-          alt='whatdaheell'
-          src='/icons/projects.svg'
-          width={0}
-          height={0}
-          className='my-4 w-32'
-        />
+          <div className={`flex items-center justify-center ${index % 2 ? 'bg-blue-700' : 'bg-blue-600'}`}>
+            <h4
+              className={`w-full px-8 py-2 text-center text-2xl lg:text-3xl font-bold text-white`}
+              key={index * statsData.length + 2}
+            >
+              {statData.title}
+            </h4>
+          </div>
 
-        <IncreasingNumber
-          finalValue={300}
-          duration={1000}
-          className={'text-8xl font-bold text-blue-700'}
-        />
-        <h4 className='w-full bg-blue-700 px-8 py-2 text-center text-3xl font-bold text-white'>
-          Proyectos completados
-        </h4>
-        <div className='bg-blue-700 px-12 pb-4 text-center text-gray-200'>
-          A lo largo de nuestras decadas de trabajo, hemos completado mas de 300
-          proyectos siempre con un enfoque serio y profesional
-        </div>
-      </div>
-
-      <div className='w-1/4 flex flex-col items-center rounded-md'>
-        <Image
-          alt='whatdaheell'
-          src='/icons/worker.svg'
-          width={0}
-          height={0}
-          className='my-4 w-32'
-        />
-
-        <IncreasingNumber
-          finalValue={20}
-          duration={1000}
-          className={'text-8xl font-bold text-blue-600'}
-        />
-        <h4 className='w-full bg-blue-600 px-8 py-2 text-center text-3xl font-bold text-white'>
-          Profesionales en el sector
-        </h4>
-        <div className='bg-blue-600 px-12 pb-4 text-center text-gray-200'>Nuestra plantilla esta formada por más de 20 profesionales curtidos en años de trabajo y dedicación al oficio</div>
-      </div>
+          <div className={`${index % 2 ? 'bg-blue-700' : 'bg-blue-600'} flex items-center justify-center`}>
+            <div
+              className='px-12 pb-4 text-center text-gray-200'
+              key={index * statsData.length + 3}
+            >
+              {statData.text}
+            </div>
+          </div>
+        </>
+      ))}
     </div>
   )
 }

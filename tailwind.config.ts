@@ -21,9 +21,8 @@ const config: Config = {
         'gradient-accent':
           'linear-gradient(0deg, rgba(12,66,117,1) 0%, rgba(12,66,117,0.8) 100%)',
       },
-      gridRowStart: {
-        '8': '8',
-        '9': '9',
+      gridTemplateRows: {
+        '4-auto': 'repeat(4, auto)'
       }
     },
   },

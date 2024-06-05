@@ -1,14 +1,9 @@
 'use client'
 
 import React, { FormEvent, useState } from 'react'
+import Input from './input'
 
 function contact() {
-  //TODO: I genuenly think this is trash, I should probably use references but whatever, copied it from some random guy on youtube :(
-  const [name, setName] = useState('')
-  const [subject, setSubject] = useState('')
-  const [mail, setMail] = useState('')
-  const [message, setMessage] = useState('')
-
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const response = await fetch('/api/contact', {
@@ -30,6 +25,13 @@ function contact() {
         onSubmit={onSubmit}
         className='mb-8 grid w-4/5 grid-cols-1 gap-4 md:grid-cols-2 xl:w-3/5 xl:w-3/5 xl:gap-8'
       >
+          <Input
+            id={'name'}
+            hasError={formHasErrors}
+            label="User"
+            type="outline"
+          />
+
         <input
           value={name}
           onChange={(e) => setName(e.target.value)}

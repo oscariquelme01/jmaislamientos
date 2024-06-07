@@ -6,7 +6,7 @@ import { companiesPath } from '../const'
 
 function companies() {
   return (
-    <div className='inline-flex w-full flex-nowrap justify-center'>
+    <div className='inline-flex w-full flex-nowrap justify-center mb-16 lg:mb-32'>
       <div className='mx-4 mt-8 flex w-full max-w-screen-xl flex-col items-center justify-center lg:mt-16'>
         <h3 className='w-full text-center text-lg font-semibold md:text-xl lg:text-2xl mb-8'>
           Unete al grupo de clientes satisfechos con nuestros servicios

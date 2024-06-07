@@ -40,17 +40,19 @@ const statsData = [
 
 function Stats() {
   return (
-    <div className='m-8 flex flex-col lg:flex-row lg:max-w-screen-xl w-4/5 md:w-1/2 lg:w-full gap-8'>
-      {statsData.map((statData, index) => (
-          <Card 
-          duration={statData.duration}
-          prefixTitle={statData.prefixTitle}
-          numberTarget={statData.finalValue}
-          path={statData.path}
-          title={statData.title}
-          text={statData.text}
-        />
-        ))}
+    <div className='w-full pt-4 bg-sky-700 flex items-center justify-center mx-4'>
+      <div className='flex flex-col lg:flex-row lg:max-w-screen-xl w-4/5 md:w-1/2 lg:w-full gap-8 relative -top-12'>
+        {statsData.map((statData, index) => (
+            <Card 
+            duration={statData.duration}
+            prefixTitle={statData.prefixTitle}
+            numberTarget={statData.finalValue}
+            path={statData.path}
+            title={statData.title}
+            text={statData.text}
+          />
+          ))}
+      </div>
     </div>
   )
 }

@@ -4,7 +4,7 @@ import React, { FormEvent, useState } from 'react'
 import Input from './input'
 import TextArea from './textArea'
 
-function validateEmail(mail) {
+function validateEmail(mail: string) {
   const mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   return mailRegex.test(mail)
 }

@@ -11,10 +11,9 @@ function Hero() {
         <h1 className='mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl'>
           JM Aislamientos y Revestimientos
         </h1>
-        <p className='mb-8 text-lg font-normal text-gray-300 sm:px-16 lg:px-48 lg:text-xl'>
-          Here at Flowbite we focus on markets where technology, innovation, and
-          capital can unlock long-term value and drive economic growth.
-        </p>
+        <h2 className='mb-8 text-lg font-normal text-gray-300 sm:px-16 lg:px-48 lg:text-xl'>
+            Especialistas en revestimiento de interiores, pladur, techos registrables y derivados, ofreciendo soluciones de alta calidad y acabados impecables
+        </h2>
         <div className='flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0'>
           <a
             href='#'

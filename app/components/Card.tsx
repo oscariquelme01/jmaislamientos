@@ -3,7 +3,7 @@ import IncreasingNumber from './increasingNumber'
 
 function Card({ duration, prefixTitle, numberTarget, path, title, text }) {
   return (
-    <div className='flex flex-col p-4 border flex-grow flex-shrink basis-0'>
+    <div className='border flex flex-col p-4 flex-grow flex-shrink basis-0 bg-white'>
       <div className='flex items-center justify-around'>
         <img alt={title} src={path} className='lg:w-16 w-12' />
         <div className='flex flex-col items-center mb-4'>

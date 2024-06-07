@@ -10,6 +10,7 @@ function footer() {
 
 
 <footer className="bg-white w-full">
+    <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
     <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-center md:gap-12 md:items-center">
           <div className="mb-6 md:mb-0">

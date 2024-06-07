@@ -18,7 +18,7 @@ function Hero() {
         <div className='flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0'>
           <a
             href='#'
-            className='inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-3 text-center text-base font-medium text-white hover:bg-blue-700'
+            className='inline-flex items-center justify-center rounded-lg bg-sky-600 px-5 py-3 text-center text-base font-medium text-white hover:bg-sky-500'
           >
             ¡Contáctanos!
             <ArrowRightIcon className='block h-4 w-6 stroke-[3px]' aria-hidden='true'/>

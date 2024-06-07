@@ -32,7 +32,7 @@ const AnimatedValueOnScroll: React.FC<Props> = ({ finalValue, duration, classNam
 
   return (
     <div ref={ref}>
-      <span className={className}>+{currentValue}</span>
+      <span className={className}>{currentValue}</span>
     </div>
   )
 }

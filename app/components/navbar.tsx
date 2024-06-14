@@ -2,14 +2,8 @@
 
 import { Transition, Menu } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link'
 import { useState, Fragment } from 'react'
-
-const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
-]
 
 export default function Navbar() {
   return (
@@ -43,15 +37,31 @@ export default function Navbar() {
             >
               <Menu.Items className='absolute left-0 mt-2 w-screen origin-top-left divide-y divide-gray-100 shadow-lg ring-1 ring-black/5 focus:outline-none'>
                 <div className='px-1 py-1 '>
-                  {navigation.map((item, index) => (
-                    <Menu.Item key={index}>
-                      {({ active }) => (
-                        <button className='group flex w-full items-center py-2 text-sm text-white border-b-[1px] border-b-gray-700'>
-                          { item.name }
-                        </button>
-                      )}
-                    </Menu.Item>
-                  ))}
+                  <Menu.Item>
+                    <Link href='/wip' className='group flex w-full items-center border-b-[1px] border-b-gray-700 py-2 text-sm text-white'>
+                      Proyectos
+                    </Link>
+                  </Menu.Item>
+
+                  <Menu.Item>
+                    <button
+                      className='group flex w-full items-center border-b-[1px] border-b-gray-700 py-2 text-sm text-white'
+                      onClick={() => {
+                        const offset =
+                          document.getElementById('contactFormHeader')
+                            ?.offsetTop || 0
+                        window.scrollTo(0, offset)
+                      }}
+                    >
+                      Contacto
+                    </button>
+                  </Menu.Item>
+
+                  <Menu.Item>
+                    <Link href='/wip' className='group flex w-full items-center border-b-[1px] border-b-gray-700 py-2 text-sm text-white'>
+                      Legal
+                    </Link>
+                  </Menu.Item>
                 </div>
               </Menu.Items>
             </Transition>
@@ -72,16 +82,24 @@ export default function Navbar() {
           </div>
           <div className='hidden sm:ml-6 sm:block'>
             <div className='flex space-x-4'>
-              {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white'
-                  aria-current={item.current ? 'page' : undefined}
-                >
-                  {item.name}
-                </a>
-              ))}
+              <button className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white'>
+                Proyectos
+              </button>
+
+              <button
+                className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white'
+                onClick={() => {
+                  const offset =
+                    document.getElementById('contactFormHeader')?.offsetTop || 0
+                  window.scrollTo(0, offset)
+                }}
+              >
+                Contacto
+              </button>
+
+              <button className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white'>
+                Legal
+              </button>
             </div>
           </div>
         </div>

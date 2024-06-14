@@ -12,7 +12,7 @@ function Hero() {
           JM Aislamientos y Revestimientos
         </h1>
         <h2 className='mb-8 text-lg font-normal text-gray-300 sm:px-16 lg:px-48 lg:text-xl'>
-            Especialistas en revestimiento de interiores, pladur, techos registrables y derivados, ofreciendo soluciones de alta calidad y acabados impecables
+            Especialistas en revestimiento de interiores, pladur, techos registrables y derivados, ofreciendo soluciones de alta calidad y acabados impecables.<br/>
         </h2>
         <HeroSubheader/>
       </div>

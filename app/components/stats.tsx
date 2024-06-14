@@ -2,13 +2,6 @@
 
 import React from 'react'
 
-import WorkerIcon from '/icons/worker.svg'
-import ProjectsIcon from '/icons/projects.svg'
-import ExperienceIcon from '/icons/experience.svg'
-
-import Image from 'next/image'
-
-import IncreasingNumber from './increasingNumber'
 import Card from './Card'
 
 const statsData = [
@@ -44,6 +37,7 @@ function Stats() {
       <div className='flex flex-col lg:flex-row lg:max-w-screen-xl w-4/5 md:w-1/2 lg:w-full gap-8 relative -top-12'>
         {statsData.map((statData, index) => (
             <Card 
+            key={index}
             duration={statData.duration}
             prefixTitle={statData.prefixTitle}
             numberTarget={statData.finalValue}

@@ -1,7 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
-import { Transition } from '@headlessui/react'
+import React from 'react'
 import { companiesPath } from '../const'
 
 function companies() {

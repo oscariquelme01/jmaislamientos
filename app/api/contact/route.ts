@@ -1,41 +1,69 @@
 import { Recipient, EmailParams, MailerSend, Sender } from 'mailersend'
 import fs from 'fs'
 
+import { Resend } from 'resend'
+import ContactEmailTemplate from '@/app/templates/ContactMailTemplate'
+
+import sanitizeHtml from 'sanitize-html'
+
+// Validate and sanitize email
+const sanitizeEmail = (email: string) => {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+  if (!emailPattern.test(email)) {
+    throw new Error('Formato de correo erroneo')
+  }
+  return email.replace(/[<>"'&]/g, (match: string) => {
+    const escape: { [key: string]: string } = {
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;',
+      '&': '&amp;',
+    }
+    return escape[match]
+  })
+}
+
 export async function POST(request: Request) {
   try {
     const formData = await request.json()
-    const { name, subject, mail, message } = formData
+    const { name, mail, message } = formData
 
-    if (!name || !subject || !mail || !message) {
-      return Response.json({ status: 'error' })
+    if (!name || !mail || !message) {
+      throw new Error('Missing form data!')
     }
 
-    const mailerSend = new MailerSend({
-      apiKey: process.env.MAIL_SENDER_API || '',
+    // Sanitize data cause you never know
+    let sanitizedName = sanitizeHtml(name)
+    let sanitizedMail = sanitizeEmail(mail)
+    let sanitizedMessage = sanitizeHtml(message)
+
+    const resend = new Resend(process.env.RESEND_API)
+
+    const { data, error } = await resend.emails.send({
+      from: 'Acme <onboarding@resend.dev>',
+      to: ['oscariquelmee@gmail.com'],
+      subject: 'Hello world',
+      react: ContactEmailTemplate({
+        name: sanitizedName,
+        email: sanitizedMail,
+        message: sanitizedMessage,
+      }),
     })
 
-    const sentFrom = new Sender('info@trial-z3m5jgrqyooldpyo.mlsender.net', 'JM Aislamientos')
-    const recipients = [new Recipient(mail, name)]
-
-    // Read the HTML template file
-    const htmlTemplate = fs.readFileSync('/templates/messageSend.html', 'utf8');
-    const formattedMessage = htmlTemplate
-      .replace('{{name}}', name)
-
-    const emailParams = new EmailParams()
-      .setFrom(sentFrom)
-      .setTo(recipients)
-      .setReplyTo(sentFrom)
-      .setSubject(subject)
-      .setHtml(formattedMessage)
-
-    console.log(`Sending mail with values ${name} ${subject} ${mail} ${message}`)
-    await mailerSend.email.send(emailParams)
-
+    console.log(data, error)
   } catch (error) {
-    console.log('/api/contact: ', error)
-    return Response.json({ status: 'error' })
+    console.error('/api/contact: ', error)
+    const errorMessage =
+      error instanceof Error
+        ? error.message
+        : 'Mensaje de error no especificado'
+    return Response.json({ status: 'error', message: errorMessage })
   }
 
-  return Response.json({ status: 'success' })
+  return Response.json({
+    status: 'success',
+    message: 'Mensaje enviado correctamente',
+  })
 }

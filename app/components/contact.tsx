@@ -53,7 +53,7 @@ function contact() {
 
   return (
     <div className='mt-4 flex w-full flex-col items-center justify-center'>
-      <h3 className='my-8 text-4xl font-bold'>¡Contáctanos!</h3>
+      <h3 id='contactFormHeader' className='my-8 text-4xl font-bold'>¡Contáctanos!</h3>
 
       <form className='flex w-3/5 flex-col gap-2 xl:w-2/5' onSubmit={onSubmit}>
         <Input

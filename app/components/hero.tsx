@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './navbar'
 
-import { ArrowRightIcon } from '@heroicons/react/24/outline'
+import HeroSubheader from './heroSubheader'
 
 function Hero() {
   return (
@@ -14,21 +14,7 @@ function Hero() {
         <h2 className='mb-8 text-lg font-normal text-gray-300 sm:px-16 lg:px-48 lg:text-xl'>
             Especialistas en revestimiento de interiores, pladur, techos registrables y derivados, ofreciendo soluciones de alta calidad y acabados impecables
         </h2>
-        <div className='flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0'>
-          <a
-            href='#'
-            className='inline-flex items-center justify-center rounded-lg bg-sky-600 px-5 py-3 text-center text-base font-medium text-white hover:bg-sky-500'
-          >
-            ¡Contáctanos!
-            <ArrowRightIcon className='block h-4 w-6 stroke-[3px]' aria-hidden='true'/>
-          </a>
-          <a
-            href='#'
-            className='inline-flex items-center justify-center rounded-lg border border-white px-5 py-3 text-center text-base font-medium text-white hover:bg-gray-100 hover:text-gray-900 sm:ms-4'
-          >
-            Conócenos
-          </a>
-        </div>
+        <HeroSubheader/>
       </div>
     </section>
   )

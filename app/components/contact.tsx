@@ -60,6 +60,8 @@ function Contact() {
       <h3 id='contactFormHeader' className='my-8 text-4xl font-bold'>¡Contáctanos!</h3>
 
       <form className='flex w-3/5 flex-col gap-2 xl:w-2/5' onSubmit={onSubmit}>
+        {/*
+        // @ts-ignore*/}
         <Input
           id={'name'}
           hasError={nameHasErrors}
@@ -67,6 +69,8 @@ function Contact() {
           label='Nombre'
           type='outline'
         />
+        {/*
+        // @ts-ignore*/}
         <Input
           id={'mail'}
           label='Correo'
@@ -74,6 +78,8 @@ function Contact() {
           hasErrorHint='Direccion de correo invalida'
           type='outline'
         />
+        {/*
+        // @ts-ignore*/}
         <TextArea
           id={'message'}
           hasError={messageHasErrors}

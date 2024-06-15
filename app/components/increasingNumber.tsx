@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer'
 interface Props {
   finalValue: number
   duration: number
-  className: String
+  className: string
 }
 
 const AnimatedValueOnScroll: React.FC<Props> = ({ finalValue, duration, className }) => {

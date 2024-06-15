@@ -1,7 +1,9 @@
 import React from 'react'
 import IncreasingNumber from './increasingNumber'
 
-function Card({ duration, prefixTitle, numberTarget, path, title, text }) {
+type CardProps = { duration: number, prefixTitle: string, numberTarget: number, path: string, title: string, text: string }
+
+function Card({ duration, prefixTitle, numberTarget, path, title, text}: CardProps) {
   return (
     <div className='border flex flex-col p-4 flex-grow flex-shrink basis-0 bg-white'>
       <div className='flex items-center justify-around'>

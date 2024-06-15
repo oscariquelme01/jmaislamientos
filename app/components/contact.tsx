@@ -17,9 +17,13 @@ function Contact() {
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    const name = document.getElementById('name')?.value
-    const mail = document.getElementById('mail')?.value
-    const message = document.getElementById('message')?.value
+    const nameElement = document.getElementById('name') as HTMLInputElement
+    const mailElement = document.getElementById('mail') as HTMLInputElement
+    const messageElement = document.getElementById('message') as HTMLInputElement
+
+    const name = nameElement.value
+    const mail = mailElement.value
+    const message = messageElement.value
 
     let formHasErrors = false
 

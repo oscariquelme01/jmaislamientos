@@ -3,7 +3,7 @@
 import React from 'react'
 import { companiesPath } from '../const'
 
-function companies() {
+function Companies() {
   return (
     <div className='inline-flex w-full flex-nowrap justify-center mb-16 lg:mb-32'>
       <div className='mx-4 mt-8 flex w-full max-w-screen-xl flex-col items-center justify-center lg:mt-16'>
@@ -46,4 +46,4 @@ function companies() {
   )
 }
 
-export default companies
+export default Companies

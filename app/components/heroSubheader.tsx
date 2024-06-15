@@ -3,7 +3,7 @@ import React from 'react'
 
 import { ArrowRightIcon } from '@heroicons/react/24/outline'
 
-function heroSubheader() {
+function HeroSubheader() {
   return (
     <div className='flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0'>
       <button
@@ -29,4 +29,4 @@ function heroSubheader() {
   )
 }
 
-export default heroSubheader
+export default HeroSubheader

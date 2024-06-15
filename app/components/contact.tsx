@@ -9,7 +9,7 @@ function validateEmail(mail: string) {
   return mailRegex.test(mail)
 }
 
-function contact() {
+function Contact() {
   const [nameHasErrors, setNameHasErrors] = useState(false)
   const [mailHasErrors, setMailHasErrors] = useState(false)
   const [messageHasErrors, setMessageHasErrors] = useState(false)
@@ -83,4 +83,4 @@ function contact() {
   )
 }
 
-export default contact
+export default Contact

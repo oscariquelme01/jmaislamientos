@@ -5,7 +5,7 @@ import { EnvelopeIcon } from '@heroicons/react/16/solid';
 import { MapPinIcon } from '@heroicons/react/16/solid';
 
 
-function footer() {
+function Footer() {
   return (
 
 
@@ -62,4 +62,4 @@ function footer() {
   );
 }
 
-export default footer;
+export default Footer;

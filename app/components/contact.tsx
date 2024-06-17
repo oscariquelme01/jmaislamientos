@@ -4,10 +4,33 @@ import React, { FormEvent, useState } from 'react'
 import Input from './input'
 import TextArea from './textArea'
 
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 function validateEmail(mail: string) {
   const mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   return mailRegex.test(mail)
 }
+
+const notifyError = (message: string) => toast.error(message, {
+  position: "top-right",
+  autoClose: 5000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  progress: undefined,
+  theme: "light",
+})
+
+const notifySuccess = (message: string) => toast.success(message, {
+  position: "top-right",
+  autoClose: 5000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  progress: undefined,
+  theme: "light",
+})
 
 function Contact() {
   const [nameHasErrors, setNameHasErrors] = useState(false)
@@ -52,7 +75,15 @@ function Contact() {
       body: JSON.stringify({ name, mail, message }),
     })
 
-    console.log(await response.json())
+    const result = await response.json()
+    if (result.status === 'success') {
+      notifySuccess(result.message)
+      nameElement.value = ''
+      mailElement.value = ''
+      messageElement.value = ''
+    } else {
+      notifyError(result.message)
+    }
   }
 
   return (
@@ -88,6 +119,7 @@ function Contact() {
           type='outline'
         />
         <button type='submit' className='bg-sky-600 hover:bg-sky-500 font-bold text-white rounded-lg p-2'>Enviar mensaje</button>
+        <ToastContainer/>
       </form>
     </div>
   )

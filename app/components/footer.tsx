@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { PhoneIcon } from '@heroicons/react/20/solid';
 import { EnvelopeIcon } from '@heroicons/react/16/solid';
 import { MapPinIcon } from '@heroicons/react/16/solid';
+import Link from 'next/link';
 
 
 function Footer() {
@@ -41,13 +42,13 @@ function Footer() {
                   <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Legal</h2>
                   <ul className="text-gray-500 font-medium">
                       <li className="mb-4">
-                          <a href="#" className="hover:underline">Politica de cookies</a>
+                          <Link href="/wip" className="hover:underline">Politica de cookies</Link>
                       </li>
                       <li className='mb-4'>
-                          <a href="#" className="hover:underline">Terminos y condiciones</a>
+                          <Link href="/wip" className="hover:underline">Terminos y condiciones</Link>
                       </li>
                       <li>
-                          <a href="#" className="hover:underline">Aviso legal</a>
+                          <Link href="/wip" className="hover:underline">Aviso legal</Link>
                       </li>
                   </ul>
               </div>

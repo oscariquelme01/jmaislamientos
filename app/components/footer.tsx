@@ -26,7 +26,7 @@ function Footer() {
                   <ul className="text-gray-500 font-medium">
                       <li className='mb-4 flex items-center gap-2'>
                           <MapPinIcon href="#" className="w-4"/>
-                          <span>C/ Michavela 29</span>
+                          <span>C/ Michavila 29</span>
                       </li>
                       <li className='mb-4 flex items-center gap-2'>
                           <PhoneIcon href="#" className="w-4"/>

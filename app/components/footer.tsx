@@ -42,7 +42,7 @@ function Footer() {
                   <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Legal</h2>
                   <ul className="text-gray-500 font-medium">
                       <li className="mb-4">
-                          <Link href="/wip" className="hover:underline">Politica de cookies</Link>
+                          <Link href="/cookies" className="hover:underline">Politica de cookies</Link>
                       </li>
                       <li className='mb-4'>
                           <Link href="/wip" className="hover:underline">Terminos y condiciones</Link>

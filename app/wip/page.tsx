@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import React from 'react'
 
 import { ArrowLeftIcon } from '@heroicons/react/20/solid'
@@ -13,6 +12,5 @@ export default function wip() {
       <div className='text-neutral-700 text-lg mt-4'>Disculpen las molestias</div>
       <img className='w-3/5 lg:w-1/3' src='/images/not-implemented.jpg' alt='not implemented'/>
     </div>
-
   )
 }

@@ -1,6 +1,3 @@
-import { Recipient, EmailParams, MailerSend, Sender } from 'mailersend'
-import fs from 'fs'
-
 import { Resend } from 'resend'
 import ContactEmailTemplate from '@/app/templates/ContactMailTemplate'
 
@@ -42,7 +39,7 @@ export async function POST(request: Request) {
     const resend = new Resend(process.env.RESEND_API)
 
     const { data, error } = await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>',
+      from: 'oscariquelmejato@gmail.com',
       to: ['oscariquelmee@gmail.com'],
       subject: 'Hello world',
       react: ContactEmailTemplate({
@@ -53,12 +50,9 @@ export async function POST(request: Request) {
     })
 
     console.log(data, error)
-  } catch (error) {
+  } catch (error: any) {
     console.error('/api/contact: ', error)
-    const errorMessage =
-      error instanceof Error
-        ? error.message
-        : 'Mensaje de error no especificado'
+    const errorMessage = error.message || 'Mensaje de error no especificado'
     return Response.json({ status: 'error', message: errorMessage })
   }
 

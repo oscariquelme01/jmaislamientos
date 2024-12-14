@@ -58,7 +58,7 @@ export default function Navbar() {
                   </Menu.Item>
 
                   <Menu.Item>
-                    <Link href='/wip' className='group flex w-full items-center border-b-[1px] border-b-gray-700 py-2 text-sm text-white'>
+                    <Link href='/legal' className='group flex w-full items-center border-b-[1px] border-b-gray-700 py-2 text-sm text-white'>
                       Legal
                     </Link>
                   </Menu.Item>
@@ -82,7 +82,7 @@ export default function Navbar() {
           </div>
           <div className='hidden sm:ml-6 sm:block'>
             <div className='flex space-x-4'>
-              <Link className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white' href='/wip'>
+              <Link className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white' href='/legal'>
                 Proyectos
               </Link>
 
@@ -97,8 +97,8 @@ export default function Navbar() {
                 Contacto
               </button>
 
-              <Link className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white' href='/wip'>
-                Legal
+              <Link className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white' href='/legal'>
+                legal
               </Link>
             </div>
           </div>

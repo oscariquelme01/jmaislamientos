@@ -48,7 +48,7 @@ function Footer() {
                           <Link href="/wip" className="hover:underline">Terminos y condiciones</Link>
                       </li>
                       <li>
-                          <Link href="/wip" className="hover:underline">Aviso legal</Link>
+                          <Link href="/legal" className="hover:underline">Aviso legal</Link>
                       </li>
                   </ul>
               </div>

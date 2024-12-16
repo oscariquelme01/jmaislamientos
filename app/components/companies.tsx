@@ -17,7 +17,7 @@ function Companies() {
                 <img
                   src={`/images/${path}`}
                   alt={`company ${index} logo`}
-                  className='lg:w-40 w-24'
+                  className='lg:w-48 md:w-[9.5rem] w-24'
                   key={index}
                 />
               </li>
@@ -34,7 +34,7 @@ function Companies() {
                 <img
                   src={`/images/${path}`}
                   alt={`company ${index} logo`}
-                  className='lg:w-40 w-24'
+                  className='lg:w-48 md:w-[9.5rem] w-24'
                   key={index}
                 />
               </li>

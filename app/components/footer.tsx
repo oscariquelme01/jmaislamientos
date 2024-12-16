@@ -26,15 +26,15 @@ function Footer() {
                   <ul className="text-gray-500 font-medium">
                       <li className='mb-4 flex items-center gap-2'>
                           <MapPinIcon href="#" className="w-4"/>
-                          <span>C/ Michavila 29</span>
+                          <span>C/ Michavila n° 29, Portal 1, 6.°A</span>
                       </li>
                       <li className='mb-4 flex items-center gap-2'>
                           <PhoneIcon href="#" className="w-4"/>
-                          <span>601 30 44 60</span>
+                          <span>+34 606 33 82 01</span>
                       </li>
                       <li className='flex items-center gap-2'>
                           <EnvelopeIcon href="#" className="w-4"/>
-                          <span>info@jmaislamientos.es</span>
+                          <span>informacion@jmrevestimientos.es</span>
                       </li>
                   </ul>
               </div>

@@ -39,7 +39,7 @@ export default function wip() {
         </p>
         <p>
           Si tienes alguna duda sobre esta política, puedes contactarnos en{" "}
-          <strong>[correo de contacto]</strong>.
+          <strong>informacion@jmrevestimientos.es</strong>.
         </p>
       </section>
     </div>

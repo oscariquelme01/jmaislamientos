@@ -34,7 +34,7 @@ function Footer() {
                       </li>
                       <li className='flex items-center gap-2'>
                           <EnvelopeIcon href="#" className="w-4"/>
-                          <span>informacion@jmrevestimientos.es</span>
+                          <span>info@jmaislamientosyrevestimientos.com</span>
                       </li>
                   </ul>
               </div>

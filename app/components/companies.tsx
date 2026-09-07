@@ -3,21 +3,27 @@
 import React from 'react'
 import { companiesPath } from '../const'
 
+const logoClassName =
+  'w-28 opacity-80 grayscale transition hover:opacity-100 hover:grayscale-0 md:w-40 lg:w-48'
+
 function Companies() {
   return (
-    <div className='inline-flex w-full flex-nowrap justify-center mb-16 lg:mb-32'>
-      <div className='mx-4 mt-8 flex w-full max-w-screen-xl flex-col items-center justify-center lg:mt-16'>
-        <h3 className='w-full text-center text-lg font-semibold md:text-xl lg:text-2xl mb-8'>
-          Unete al grupo de clientes satisfechos con nuestros servicios
+    <section className='w-full bg-gray-50 py-16 lg:py-20'>
+      <div className='mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center px-4 sm:px-6 lg:px-8'>
+        <p className='mb-3 text-sm font-black uppercase tracking-[0.3em] text-sky-700'>
+          Clientes
+        </p>
+        <h3 className='mb-10 max-w-2xl text-center text-2xl font-black text-gray-950 md:text-3xl'>
+          Empresas que han confiado en nuestro trabajo
         </h3>
-        <div className='inline-flex w-full max-w-screen-xl flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]'>
-          <ul className='flex animate-infinite-scroll-x items-center justify-center md:justify-start [&_img]:max-w-none lg:[&_li]:mx-8 [&_li]:mx-4'>
+        <div className='inline-flex w-full max-w-screen-xl flex-nowrap overflow-hidden rounded-3xl bg-white py-8 shadow-sm shadow-gray-200 [mask-image:_linear-gradient(to_right,transparent_0,_black_96px,_black_calc(100%-96px),transparent_100%)]'>
+          <ul className='flex animate-infinite-scroll-x items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-6 lg:[&_li]:mx-10'>
             {companiesPath.map((path, index) => (
               <li key={index}>
                 <img
                   src={`/images/${path}`}
                   alt={`company ${index} logo`}
-                  className='lg:w-48 md:w-[9.5rem] w-24'
+                  className={logoClassName}
                   key={index}
                 />
               </li>
@@ -26,7 +32,7 @@ function Companies() {
 
           {/* Duplicate element to ensure smooth transition */}
           <ul
-            className='flex animate-infinite-scroll-x items-center justify-center md:justify-start [&_img]:max-w-none lg:[&_li]:mx-8 [&_li]:mx-4'
+            className='flex animate-infinite-scroll-x items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-6 lg:[&_li]:mx-10'
             aria-hidden={true}
           >
             {companiesPath.map((path, index) => (
@@ -34,7 +40,7 @@ function Companies() {
                 <img
                   src={`/images/${path}`}
                   alt={`company ${index} logo`}
-                  className='lg:w-48 md:w-[9.5rem] w-24'
+                  className={logoClassName}
                   key={index}
                 />
               </li>
@@ -42,7 +48,7 @@ function Companies() {
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

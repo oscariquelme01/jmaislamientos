@@ -3,6 +3,7 @@
 import React, { FormEvent, useState } from 'react'
 import Input from './input'
 import TextArea from './textArea'
+import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/20/solid'
 
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -36,6 +37,7 @@ function Contact() {
   const [nameHasErrors, setNameHasErrors] = useState(false)
   const [mailHasErrors, setMailHasErrors] = useState(false)
   const [messageHasErrors, setMessageHasErrors] = useState(false)
+  const [isSending, setIsSending] = useState(false)
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -47,6 +49,10 @@ function Contact() {
     const name = nameElement.value
     const mail = mailElement.value
     const message = messageElement.value
+
+    setNameHasErrors(false)
+    setMailHasErrors(false)
+    setMessageHasErrors(false)
 
     let formHasErrors = false
 
@@ -67,6 +73,9 @@ function Contact() {
 
     if (formHasErrors) return
 
+    setIsSending(true)
+
+    try {
     const response = await fetch('/api/contact', {
       method: 'POST',
       headers: {
@@ -84,13 +93,30 @@ function Contact() {
     } else {
       notifyError(result.message)
     }
+    } catch {
+      notifyError('No se pudo enviar el mensaje. Inténtalo de nuevo más tarde')
+    } finally {
+      setIsSending(false)
+    }
   }
 
   return (
-    <div className='mt-4 flex w-full flex-col items-center justify-center'>
-      <h3 id='contactFormHeader' className='my-8 text-4xl font-bold'>¡Contáctanos!</h3>
+    <section className='w-full bg-gray-50 py-20 lg:py-28'>
+      <div className='mx-auto grid max-w-screen-xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8'>
+        <div>
+          <p className='mb-3 text-sm font-black uppercase tracking-[0.3em] text-sky-700'>
+            Contacto
+          </p>
+          <h3 id='contactFormHeader' className='text-3xl font-black tracking-tight text-gray-950 sm:text-4xl lg:text-5xl'>
+            Cuéntanos qué necesitas
+          </h3>
+          <p className='mt-5 text-lg leading-8 text-gray-500'>
+            Si tienes una obra, reforma, vivienda o local en Madrid, escríbenos
+            y te responderemos lo antes posible.
+          </p>
+        </div>
 
-      <form className='flex w-3/5 flex-col gap-2 xl:w-2/5' onSubmit={onSubmit}>
+      <form className='flex flex-col gap-4 rounded-3xl bg-white p-6 shadow-xl shadow-gray-200/70 sm:p-8' onSubmit={onSubmit}>
         {/*
         // @ts-ignore*/}
         <Input
@@ -118,10 +144,17 @@ function Contact() {
           label='Mensaje'
           type='outline'
         />
-        <button type='submit' className='bg-sky-600 hover:bg-sky-500 font-bold text-white rounded-lg p-2'>Enviar mensaje</button>
+        <button
+          type='submit'
+          disabled={isSending}
+          className='rounded-xl bg-sky-600 p-3 font-bold text-white transition hover:bg-sky-500 disabled:cursor-not-allowed disabled:bg-gray-400'
+        >
+          {isSending ? 'Enviando...' : 'Enviar mensaje'}
+        </button>
         <ToastContainer/>
       </form>
-    </div>
+      </div>
+    </section>
   )
 }
 

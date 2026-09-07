@@ -33,8 +33,17 @@ const statsData = [
 
 function Stats() {
   return (
-    <div className='w-full pt-4 bg-sky-700 flex items-center justify-center mx-4'>
-      <div className='flex flex-col lg:flex-row lg:max-w-screen-xl w-4/5 md:w-1/2 lg:w-full gap-8 relative -top-12'>
+    <section className='w-full bg-sky-700 py-20'>
+      <div className='mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8'>
+        <div className='mb-10 max-w-2xl text-white'>
+          <p className='mb-3 text-sm font-black uppercase tracking-[0.3em] text-sky-100'>
+            Garantía de oficio
+          </p>
+          <h2 className='text-3xl font-black tracking-tight sm:text-4xl'>
+            Experiencia real en obras de todos los tamaños
+          </h2>
+        </div>
+      <div className='grid gap-6 md:grid-cols-3'>
         {statsData.map((statData, index) => (
             <Card 
             key={index}
@@ -47,7 +56,8 @@ function Stats() {
           />
           ))}
       </div>
-    </div>
+      </div>
+    </section>
   )
 }
 

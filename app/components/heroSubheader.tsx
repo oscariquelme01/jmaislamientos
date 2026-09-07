@@ -1,13 +1,14 @@
 'use client'
 import React from 'react'
+import Link from 'next/link'
 
 import { ArrowRightIcon } from '@heroicons/react/24/outline'
 
 function HeroSubheader() {
   return (
-    <div className='flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0'>
+    <div className='flex flex-col gap-4 sm:flex-row'>
       <button
-        className='inline-flex items-center justify-center rounded-lg bg-sky-600 px-5 py-3 text-center text-base font-medium text-white hover:bg-sky-500'
+        className='inline-flex items-center justify-center rounded-full bg-sky-600 px-6 py-3 text-center text-base font-bold text-white shadow-lg shadow-sky-950/30 transition hover:bg-sky-500'
         onClick={() => {
           const offset = document.getElementById('contactFormHeader')?.offsetTop || 0
           window.scrollTo(0, offset)
@@ -19,12 +20,12 @@ function HeroSubheader() {
           aria-hidden='true'
         />
       </button>
-      <a
-        href='#'
-        className='inline-flex items-center justify-center rounded-lg border border-white px-5 py-3 text-center text-base font-medium text-white hover:bg-gray-100 hover:text-gray-900 sm:ms-4'
+      <Link
+        href='/proyectos'
+        className='inline-flex items-center justify-center rounded-full border border-white/70 px-6 py-3 text-center text-base font-bold text-white transition hover:bg-white hover:text-gray-950'
       >
-        Conócenos
-      </a>
+        Ver proyectos
+      </Link>
     </div>
   )
 }

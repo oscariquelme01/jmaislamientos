@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import { PhoneIcon } from '@heroicons/react/20/solid';
 import { EnvelopeIcon } from '@heroicons/react/16/solid';
 import { MapPinIcon } from '@heroicons/react/16/solid';
@@ -8,55 +7,52 @@ import Link from 'next/link';
 
 function Footer() {
   return (
-
-
-<footer className="bg-white w-full">
-    <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-    <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        <div className="md:flex md:justify-center md:gap-12 md:items-center">
-          <div className="mb-6 md:mb-0">
-              <a href="https://flowbite.com/" className="flex items-center">
-                  <img src="/images/logo-black.png" className="h-8 me-3" alt="FlowBite Logo" />
-                  <span className="self-center text-2xl font-semibold whitespace-nowrap">JM Aislamientos<br/>Y Revestimientos</span>
-              </a>
+<footer className="w-full bg-white">
+    <div className="mx-auto w-full max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="grid gap-10 border-t border-gray-200 pt-10 md:grid-cols-[1.1fr_1fr_0.7fr] md:items-start">
+          <div>
+              <Link href="/" className="flex items-center gap-4">
+                  <img src="/images/logo-black.png" className="h-12 w-auto" alt="JM Aislamientos y Revestimientos" />
+                  <span className="text-2xl font-black leading-tight text-gray-950">JM Aislamientos<br/>Y Revestimientos</span>
+              </Link>
+              <p className='mt-5 max-w-sm text-sm leading-6 text-gray-500'>
+                Especialistas en pladur, aislamientos, techos registrables y revestimientos interiores.
+              </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-2">
               <div>
-                  <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Información</h2>
-                  <ul className="text-gray-500 font-medium">
+                  <h2 className="mb-6 text-sm font-black uppercase tracking-widest text-gray-950">Información</h2>
+                  <ul className="space-y-4 font-medium text-gray-500">
                       <li className='mb-4 flex items-center gap-2'>
-                          <MapPinIcon href="#" className="w-4"/>
+                          <MapPinIcon className="w-4 text-sky-700"/>
                           <span>C/ Michavila n° 29, Portal 1, 6.°A</span>
                       </li>
                       <li className='mb-4 flex items-center gap-2'>
-                          <PhoneIcon href="#" className="w-4"/>
-                          <span>+34 606 33 82 01</span>
+                          <PhoneIcon className="w-4 text-sky-700"/>
+                          <a href='tel:+34606338201' className='hover:text-sky-700'>+34 606 33 82 01</a>
                       </li>
                       <li className='flex items-center gap-2'>
-                          <EnvelopeIcon href="#" className="w-4"/>
-                          <span>info@jmaislamientosyrevestimientos.com</span>
+                          <EnvelopeIcon className="w-4 text-sky-700"/>
+                          <a href='mailto:info@jmaislamientosyrevestimientos.com' className='hover:text-sky-700'>info@jmaislamientosyrevestimientos.com</a>
                       </li>
                   </ul>
               </div>
               <div>
-                  <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Legal</h2>
-                  <ul className="text-gray-500 font-medium">
+                  <h2 className="mb-6 text-sm font-black uppercase tracking-widest text-gray-950">Enlaces</h2>
+                  <ul className="space-y-4 font-medium text-gray-500">
                       <li className="mb-4">
-                          <Link href="/cookies" className="hover:underline">Politica de cookies</Link>
+                          <Link href="/proyectos" className="hover:text-sky-700">Proyectos</Link>
                       </li>
                       <li className='mb-4'>
-                          <Link href="/wip" className="hover:underline">Terminos y condiciones</Link>
+                          <Link href="/cookies" className="hover:text-sky-700">Política de cookies</Link>
                       </li>
                       <li>
-                          <Link href="/legal" className="hover:underline">Aviso legal</Link>
+                          <Link href="/legal" className="hover:text-sky-700">Aviso legal</Link>
                       </li>
                   </ul>
               </div>
-          </div>
       </div>
-      <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-      <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center">© 2024 JM Aislamientos y Revestimientos™. All Rights Reserved.</span>
+      <div className="mt-10 border-t border-gray-200 pt-6">
+          <span className="text-sm text-gray-500">© 2026 JM Aislamientos y Revestimientos. Todos los derechos reservados.</span>
       </div>
     </div>
 </footer>

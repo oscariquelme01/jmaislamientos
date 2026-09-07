@@ -9,7 +9,7 @@ const ContactEmailTemplate = ({
   message: string
 }) => {
   return (
-    <Html lang='en'>
+    <Html lang='es'>
       <Heading as='h1'>Nuevo mensaje recibido de la web!</Heading>
       <Text>Nombre: {name}</Text>
       <Text>Correo: {email}</Text>

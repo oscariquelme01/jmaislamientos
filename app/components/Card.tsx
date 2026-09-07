@@ -5,23 +5,25 @@ type CardProps = { duration: number, prefixTitle: string, numberTarget: number, 
 
 function Card({ duration, prefixTitle, numberTarget, path, title, text}: CardProps) {
   return (
-    <div className='border flex flex-col p-4 flex-grow flex-shrink basis-0 bg-white'>
-      <div className='flex items-center justify-around'>
-        <img alt={title} src={path} className='lg:w-16 w-12' />
-        <div className='flex flex-col items-center mb-4'>
-          <span className='text-gray-400'>{prefixTitle}</span>
+    <article className='flex h-full flex-col rounded-2xl bg-white p-6 shadow-xl shadow-sky-950/10'>
+      <div className='flex items-start gap-5'>
+        <div className='rounded-2xl bg-sky-50 p-3'>
+          <img alt={title} src={path} className='h-10 w-10 lg:h-12 lg:w-12' />
+        </div>
+        <div className='mb-4 flex flex-col'>
+          <span className='text-sm font-medium text-gray-400'>{prefixTitle}</span>
           <IncreasingNumber
             finalValue={numberTarget}
             duration={duration}
-            className='text-6xl font-bold text-sky-700'
+            className='text-5xl font-black text-sky-700'
           />
-          <h4 className='text-xl text-sky-700 text-center'>{title}</h4>
+          <h4 className='text-lg font-bold text-sky-700'>{title}</h4>
         </div>
       </div>
-      <div className='text-gray-500 text-center'>
+      <p className='mt-auto text-sm leading-6 text-gray-500'>
         {text}
-      </div>
-    </div>
+      </p>
+    </article>
   )
 }
 

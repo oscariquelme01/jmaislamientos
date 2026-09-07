@@ -1,104 +1,89 @@
 'use client'
 
-import { Transition, Menu } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
-import { useState, Fragment } from 'react'
+import { useState } from 'react'
+
+function scrollToContact() {
+  const offset = document.getElementById('contactFormHeader')?.offsetTop || 0
+  window.scrollTo({ top: offset, behavior: 'smooth' })
+}
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
-    <div className='relative'>
-      <Menu as='div' className='relative inline-block text-left sm:hidden'>
-        {({ open }) => (
-          <>
-            <Menu.Button className='inline-flex w-full justify-center rounded-md bg-black/20 px-2 py-2 text-sm font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75'>
-              <span>
-                {open ? (
-                  <XMarkIcon
-                    className='h-8 w-8 text-gray-300 hover:text-white'
-                    aria-hidden='true'
-                  />
-                ) : (
-                  <Bars3Icon
-                    className='h-8 w-8 text-gray-300 hover:text-white'
-                    aria-hidden='true'
-                  />
-                )}
-              </span>
-            </Menu.Button>
-            <Transition
-              as={Fragment}
-              enter='transition ease-out duration-300'
-              enterFrom='transform opacity-0 scale-95'
-              enterTo='transform opacity-100 scale-100'
-              leave='transition ease-in duration-200'
-              leaveFrom='transform opacity-100 scale-100'
-              leaveTo='transform opacity-0 scale-95'
+    <div className='relative z-20 mx-auto max-w-screen-xl px-4 pt-4 sm:px-6 lg:px-8'>
+      <div className='relative sm:hidden'>
+        <button
+          type='button'
+          className='inline-flex justify-center rounded-full bg-white/10 px-3 py-3 text-sm font-medium text-white backdrop-blur hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75'
+          aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
+          aria-expanded={isOpen}
+          onClick={() => setIsOpen((open) => !open)}
+        >
+          {isOpen ? (
+            <XMarkIcon className='h-8 w-8 text-gray-300' aria-hidden='true' />
+          ) : (
+            <Bars3Icon className='h-8 w-8 text-gray-300' aria-hidden='true' />
+          )}
+        </button>
+
+        {isOpen && (
+          <div className='absolute left-0 mt-3 w-[calc(100vw-2rem)] rounded-2xl bg-gray-950/95 p-3 shadow-lg ring-1 ring-white/10 backdrop-blur'>
+            <Link
+              href='/proyectos'
+              className='block rounded-xl px-3 py-3 text-sm font-medium text-white hover:bg-white/10'
+              onClick={() => setIsOpen(false)}
             >
-              <Menu.Items className='absolute left-0 mt-2 w-screen origin-top-left divide-y divide-gray-100 shadow-lg ring-1 ring-black/5 focus:outline-none'>
-                <div className='px-1 py-1 '>
-                  <Menu.Item>
-                    <Link href='/wip' className='group flex w-full items-center border-b-[1px] border-b-gray-700 py-2 text-sm text-white'>
-                      Proyectos
-                    </Link>
-                  </Menu.Item>
-
-                  <Menu.Item>
-                    <button
-                      className='group flex w-full items-center border-b-[1px] border-b-gray-700 py-2 text-sm text-white'
-                      onClick={() => {
-                        const offset =
-                          document.getElementById('contactFormHeader')
-                            ?.offsetTop || 0
-                        window.scrollTo(0, offset)
-                      }}
-                    >
-                      Contacto
-                    </button>
-                  </Menu.Item>
-
-                  <Menu.Item>
-                    <Link href='/legal' className='group flex w-full items-center border-b-[1px] border-b-gray-700 py-2 text-sm text-white'>
-                      Legal
-                    </Link>
-                  </Menu.Item>
-                </div>
-              </Menu.Items>
-            </Transition>
-          </>
+              Proyectos
+            </Link>
+            <button
+              type='button'
+              className='block w-full rounded-xl px-3 py-3 text-left text-sm font-medium text-white hover:bg-white/10'
+              onClick={() => {
+                setIsOpen(false)
+                scrollToContact()
+              }}
+            >
+              Contacto
+            </button>
+            <Link
+              href='/legal'
+              className='block rounded-xl px-3 py-3 text-sm font-medium text-white hover:bg-white/10'
+              onClick={() => setIsOpen(false)}
+            >
+              Legal
+            </Link>
+          </div>
         )}
-      </Menu>
+      </div>
 
       {/* Navbar wrapper */}
-      <div className='w-full bg-transparent pt-4 sm:pl-2'>
-        {/* Desktop navbar (only the links will hide on mobile, the logo will stay) */}
-        <div className='mx-[20%] flex flex-1 items-center justify-center border-b-[1px] border-gray-600 pb-6'>
+      <div className='hidden w-full bg-transparent sm:block'>
+        <div className='flex items-center justify-between border-b border-white/15 pb-5'>
           <div className='flex flex-shrink-0 items-center'>
             <img
-              className='h-8 w-auto'
+              className='h-9 w-auto'
               src='/images/logo-white.png'
-              alt='Your Company'
+               alt='JM Aislamientos y Revestimientos'
             />
           </div>
           <div className='hidden sm:ml-6 sm:block'>
             <div className='flex space-x-4'>
-              <Link className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white' href='/wip'>
+              <Link className='rounded-full px-4 py-2 text-sm font-bold text-gray-200 transition hover:bg-white/10 hover:text-white' href='/proyectos'>
                 Proyectos
               </Link>
 
               <button
-                className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white'
-                onClick={() => {
-                  const offset =
-                    document.getElementById('contactFormHeader')?.offsetTop || 0
-                  window.scrollTo(0, offset)
-                }}
+                className='rounded-full px-4 py-2 text-sm font-bold text-gray-200 transition hover:bg-white/10 hover:text-white'
+                onClick={scrollToContact}
               >
                 Contacto
               </button>
 
-              <Link className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white' href='/legal'>
-                legal
+              <Link className='rounded-full px-4 py-2 text-sm font-bold text-gray-200 transition hover:bg-white/10 hover:text-white' href='/legal'>
+                Legal
               </Link>
             </div>
           </div>
